@@ -1,0 +1,8 @@
+step:-1:react project npx create-react-app Todo
+step:-2:create Todo.js in that two div first div is main-div second div is child-div  then in that <figure> tag inside that img tag in img tag used todo image and <figurecaption>Add Your List Here close figure tag.create another div in that className is "addItems" inside that input tag placeholder="add item"
+and in addItems madhe i tag  fa fa-plus add-btn title add item
+
+create new div className="showItems"
+div className="eachItem
+h3 Apple
+<i className="far fa-trash 
