@@ -1,5 +1,5 @@
 import {useState} from "react";
-
+import ToDodata from "./ToDodata";
 const Todo = () => {
     const [inputList,setInputList]=useState("");
     const [items,setItems]=useState([])
@@ -11,20 +11,21 @@ const Todo = () => {
         setItems((oldItems)=>{
             return [...oldItems,inputList]
         })
+        setInputList("")
     }
     return (
 <>
     <div>
-      <input type="text" placeholder="📝 here" onChange={itemEvent}/>
+      <input type="text" placeholder="📝 here" onChange={itemEvent} value={inputList}/>
       <button id="addBtn" onClick={listOfItems}>Add</button>
-      <button id="editBtn">Edit</button>
-      <button id="deleteBtn">Delete</button>
+      
+
     </div>
     <div>
         <ol>
             {/* <li>{inputList}</li> */}
           {items.map(data=>{
-              return <li>{data}</li>  
+              return <ToDodata text={data}/>
             })}
         </ol>
     </div>
